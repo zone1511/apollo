@@ -11,9 +11,9 @@ import javax.persistence.Lob;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "Commit")
-@SQLDelete(sql = "Update Commit set isDeleted = 1 where id = ?")
-@Where(clause = "isDeleted = 0")
+@Table(name = "Commits")
+@SQLDelete(sql = "Update Commits set IsDeleted = 1 where id = ?")
+@Where(clause = "IsDeleted = 0")
 public class Commit extends BaseEntity {
 
   @Lob
