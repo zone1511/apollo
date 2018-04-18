@@ -20,7 +20,7 @@ public class ServerConfig extends BaseEntity {
   @Column(name = "ItemKey", nullable = false)
   private String key;
 
-  @Column(name = "Cluster", nullable = false)
+  @Column(name = "ClusterName", nullable = false)
   private String cluster;
 
   @Column(name = "Value", nullable = false)

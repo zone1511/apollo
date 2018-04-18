@@ -26,7 +26,7 @@ import com.ctrip.framework.apollo.core.enums.ConfigFileFormat;
 @EnableAutoConfiguration
 @EnableTransactionManagement
 @ComponentScan(basePackageClasses = { ApolloCommonConfig.class, ApolloBizConfig.class })
-public class DBInitApplication implements CommandLineRunner {
+public class ConfigDBInitApplication implements CommandLineRunner {
 	@Autowired
 	AppService appService;
 	@Autowired
@@ -35,7 +35,7 @@ public class DBInitApplication implements CommandLineRunner {
 	ClusterService clusters;
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = new SpringApplicationBuilder(DBInitApplication.class).run(args);
+		ConfigurableApplicationContext context = new SpringApplicationBuilder(ConfigDBInitApplication.class).run(args);
 		context.addApplicationListener(new ApplicationPidFileWriter());
 		context.addApplicationListener(new EmbeddedServerPortFileWriter());
 	}

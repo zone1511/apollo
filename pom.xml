@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -303,6 +304,7 @@
 				</exclusions>
 			</dependency>
 		</dependencies>
+
 	</dependencyManagement>
 
 	<dependencies>
@@ -435,7 +437,8 @@
 					<artifactId>versions-maven-plugin</artifactId>
 					<version>2.2</version>
 				</plugin>
-				<!-- Need to set releases.repo and snapshots.repo properties in your .m2/settings.xml -->
+				<!-- Need to set releases.repo and snapshots.repo properties in your 
+					.m2/settings.xml -->
 			</plugins>
 		</pluginManagement>
 		<plugins>
@@ -591,7 +594,7 @@
 			</activation>
 		</profile>
 		<profile>
-      <!-- for ctrip development -->
+			<!-- for ctrip development -->
 			<id>ctrip-dev</id>
 			<properties>
 				<package.environment>ctrip</package.environment>
@@ -685,7 +688,7 @@
 		<profile>
 			<!-- for ctrip development with logging capability -->
 			<id>ctrip-logging</id>
-            <dependencies>
+			<dependencies>
 				<dependency>
 					<groupId>com.dianping.cat</groupId>
 					<artifactId>cat-client</artifactId>
@@ -766,7 +769,7 @@
 								<groupId>io.netty</groupId>
 								<artifactId>netty-transport</artifactId>
 							</exclusion>
-                            <!-- duplicated with commons-collections and commons-beanutils -->
+							<!-- duplicated with commons-collections and commons-beanutils -->
 							<exclusion>
 								<groupId>commons-beanutils</groupId>
 								<artifactId>commons-beanutils-core</artifactId>
